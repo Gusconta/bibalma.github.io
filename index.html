@@ -5,28 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Proyecto Web</title>
 </head>
 <body>
-    <head>
-        <div>
-            <h1>Biblioteca Popular Almafuerte</h1>
-        </div>
-    </head>
-    <main>
-        <nav>
-            <a href="paginas/nosotros/nosotros.html" target="_blank">Nosotros</a>
-                    
-            <a href="paginas/catalogo/catalogo.html" target="_blank">Catálogo</a>
-            
-            <a href="paginas/hacete_socio/hacete_socio.html" target="_blank">Hacete Socio</a>
-                 
-            <a href="paginas/usuarios/usuario.html" target="_blank">Usuario</a>
+    <header>
+        <div class="container_1">
+            <div class="encabezado">
+                <img class="logo" src="logos/Bibalma10.png" alt="imagen-logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a class="centered" href="paginas/nosotros/nosotros.html" target="_blank">Nosotros</a>    
+                    </li>
+                    <li>
+                        <a class="centered" href="paginas/catalogo/catalogo.html" target="_blank">Catálogo</a>
+                    </li>
+                    <li>
+                        <a class="centered" href="paginas/hacete_socio/hacete_socio.html" target="_blank">Hacete Socio</a>
+                    </li>
+                    <li>
+                        <a class="centered" href="paginas/usuarios/usuario.html" target="_blank">Usuario</a>
+                    </li>
+                </ul>      
+    
             </nav>
+            <script>
+                window.addEventListener('scroll', function() {
+                  var navbar = document.querySelector('.navbar');
+                  navbar.classList.toggle('scroll', window.scrollY > 0);
+                });
+            </script>
+        </div>
+        
+    </header>
+        
+    <main>
+        <section>
+            <div class="container_2">
+                <div class="carrousel">carrousel</div>
+                <article class="articulos">articulos</article>
+                <aside class="aside">aside</aside>
+            </div>
+        </section>
+        
     </main>
+
     <footer>
-        <h2>¿Cómo llegar?</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5109633697766!2d-58.5553916!3d-34.692290099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc61de2692b13%3A0xa25b6e759984312f!2sSarratea%204267%2C%20B1754CFW%20San%20Justo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1682554478805!5m2!1ses!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container_3">
+            <div class="footer">
+                <h2>¿Cómo llegar?</h2>
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5109633697766!2d-58.5553916!3d-34.692290099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc61de2692b13%3A0xa25b6e759984312f!2sSarratea%204267%2C%20B1754CFW%20San%20Justo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1682554478805!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </footer>
     
 </body>
