@@ -21,7 +21,7 @@ body {
     padding: 1px;
 }
 
-/*   header   */
+/*********************   header   **************************/
 
 .encabezado {grid-area: encabezado;}
 .navbar {grid-area: navbar}
@@ -34,35 +34,186 @@ body {
     grid-gap: 1px;
 }
 
+/*   encabezado  */
+
 .encabezado {
-    height: 5em;  
+    display: inline-block;
+    align-items: center;
+    height: 100%;
+   
 }
 
 .logo {
-    width: 15em;
-    height: 5em;
+    width: 20%;
+    height: 90%;
+}
+
+/*   barra de navegacion   */
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+        background-color: #ef601e;
+        transition: 1.0s ease;
+        /*position: sticky;
+        top: 0;*/
+        transition: 0.3s all; /*Se aplica una transición de 0.3 segundos*/
+}
+
+.navbar:hover {
+    opacity: 1;   
+}
+ 
+.navbar.scroll {
+    background-color: #000000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    /*Fondo transparente de la barra nav cuando se scrollea*/
+}
+
+.navbar.scroll:hover {
+    background-color: #ef601e;
+    opacity: 1;
+}
+
+nav ul {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap; /*propiedad shorthand*/
+    justify-content: space-evenly;
+    align-items: center; /*Puede servir para mediaquieries*/
+    list-style-type: none;
+    height: 2.5em;
+    padding: 4px;
+    transition: 0.3s all;
+    
+          
+}
+
+nav ul:hover {
+    
+    height: 60px;
+    transition: 0.3s all;
 }
 
 
-/*      main      */
+nav ul li {
+    height: 100%;
+    
+}
 
-.carrousel {grid-area: carrousel}
+nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 8em;
+    height: 100%;
+    color: #d6e8f7;
+    transition: 0.3s all;
+    font-size: 1.5em;
+    
+}
+
+nav ul li a:hover {
+    background-color: #CAAACD;
+    color: #6E4F3B;
+    border-radius: 5px;
+    transition: 0.3s all;
+}
+
+
+/************************      main      ***********************/
+
+/*  carousel  */
+
+.carousel-container {grid-area: carousel}
 .articulos {grid-area: articulos;}
 .aside {grid-area: aside;}
 
 .container_2 {
     display: grid;
     grid-template-areas:
-            'carrousel carrousel carrousel carrousel'
+            'carousel carousel carousel carousel'
             'articulos articulos articulos aside'
             'articulos articulos articulos aside';
 }
 
-.carrousel {
-    background-color: #FFFFFF;
-    text-align: center;
-    height: 15em;
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
+  
+.carousel-track {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+}
+  
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+  
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    opacity: 0.3;
+    color: rgba(170, 165, 165, 0.5);
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    z-index: 1;
+}
+  
+.next, .prev {
+    display: flex;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+        
+}
+.carousel-prev {
+    left: 0%;
+}
+  
+.carousel-next {
+    right: 0%;
+}
+  
+.carousel-prev i,
+.carousel-next i {
+    transition: transform 0.5s ease-in-out;
+}
+  
+.carousel-prev:hover i {
+    transform: translateX(-3px);
+}
+  
+.carousel-next:hover i {
+    transform: translateX(3px);
+}
+  
+/**        articulos         **/
+
 .articulos {
     background-color: #CAAACD;
     text-align: center;
@@ -95,79 +246,4 @@ body {
     width: 18em;
     height: 8em;
     padding: 10px;    
-}
-
-
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*        barra de navegacion        */
-
-nav:hover {
-    opacity: 1;   
-}
-
-.navbar {
-        background-color: #ef601e;
-        transition: 1.0s ease;
-        position: sticky;
-        top: 0;
-    /*Se aplica una transición de 0.3 segundos*/
-}
- 
-.navbar.scroll {
-    opacity: 0.3;
-    /*Fondo transparente de la barra nav cuando se scrollea*/
-}
-
-.navbar.scroll:hover {
-    background-color: #ef601e;
-    opacity: 1;
-}
-
-nav ul {
-    display: flex;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    flex-flow: row wrap; /*propiedad shorthand*/
-    
-    justify-content: space-evenly;
-    align-items: center; /*Puede servir para mediaquieries*/
-    list-style-type: none;
-    height: 2.5em;
-    padding: 4px;
-    transition: 0.3s all;
-          
-}
-
-nav ul:hover {
-    
-    height: 60px;
-    transition: 0.3s all;
-}
-
-
-nav ul li {
-    height: 100%;
-    
-}
-
-nav ul li a {
-    text-decoration: none;
-    display: inline-block;
-    width: 8em;
-    height: 100%;
-    color: #d6e8f7;
-    transition: 0.3s all;
-    
-}
-
-nav ul li a:hover {
-    background-color: #CAAACD;
-    color: #6E4F3B;
-    border-radius: 5px;
-    transition: 0.3s all;
 }
