@@ -9,11 +9,11 @@
     <title>Proyecto Web</title>
 </head>
 <body>
+    <h1 id="titulo">Biblioteca Pupular Almafuerte</h1>
     <header>
         <div class="container_1">
             <div class="encabezado">
-                <img class="logo" src="images/logos/Bibalma10.png" alt="imagen-logo"> Ver que paso aca
-                <a href="paginas/usuarios/usuario.html"></a>
+                <a href="index.html"><img class="logo" src="images/logos/logo-1.png" alt="Descripción del logo"></a>
             </div>
             <nav class="navbar">
                 <ul>
@@ -45,13 +45,13 @@
                     </button> 
                     <div class="carousel-track"> 
                         <div class="carousel-item">
-                            <img src="images/carousel/Carrousel_2.jpg" alt="Imagen 1">
+                            <img src="images/carousel/carousel-1.png" alt="Imagen 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/carousel/Carrousel_2.jpg" alt="Imagen 2">
+                            <img src="images/carousel/carousel-2.png" alt="Imagen 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/carousel/Carrousel_2.jpg" alt="Imagen 3">
+                            <img src="images/carousel/carousel-3.png" alt="Imagen 3">
                         </div>  
                     </div>
                     <button class="carousel-next">
@@ -60,8 +60,72 @@
                         </div>   
                     </button>
                 </div>
-                <article class="articulos">articulos</article>
-                <aside class="aside">aside</aside>
+                <div class="search">
+                    <form id="searchForm">
+                      <input type="text" id="searchInput" placeholder="Buscar en catálogo...">
+                      <button type="submit">Buscar</button>
+                    </form>
+                </div>
+                <!-- <div class="search">
+                    <div>
+                        Buscador catalogo digital
+                    </div>
+                </div> -->
+                    <div class="articulos-container">
+                        <div>
+                            <a href="index.html"><img class="icono-cartelera" src="images/icono articulos/cartelera.png" alt="Icono-articulos"></a><!-- <h2>Cartelera</h2> -->
+                        </div>
+                        <div>
+                            <a href="index.html"><img class="icono-colabora" src="images/icono articulos/colabora.png" alt="Icono-articulos"></a><!-- <h2>Colaborá con Bibalma</h2> -->
+                        </div>
+                        <div>
+                            <a href="index.html"><img class="icono-bibliotecologia" src="images/icono articulos/bibliotecologia.png" alt="Icono-articulos"></a><!-- <h2>Bibliotecología para estudiantes</h2> -->
+                        </div>
+                        <div>
+                            <a href="index.html"><img class="icono-rincon" src="images/icono articulos/rincon.png" alt="Icono-articulos"></a><!-- <h2>Rincón Infantil</h2> -->
+                        </div>
+                        <div>
+                            <a href="index.html"><img class="icono-inscripción" src="images/icono articulos/inscripcion.png" alt="Icono-articulos"></a><!-- <h2>Inscripción a nuestros talleres</h2> -->
+                        </div>
+                        <div>
+                            <a href="index.html"><img class="icono-espacio" src="images/icono articulos/solicitud.png" alt="Icono-articulos"></a><!-- <h2>Solicitud de espacios</h2> -->
+                        </div>
+                    </div>
+                
+                <aside class="aside">
+                    <h2 class="info">Información de contacto</h2>
+                    <h2>Horarios de Atención</h2>
+                    <ul>
+                        <li>LUNES de 15:00 a 18:00 horas</li>
+                        <li>MARTES de 8:30 a 11:30 horas</li>
+                        <li>MIÉRCOLES de 15:00 a 18:00 horas</li>
+                        <li>JUEVES de 8:30 a 11:30 horas</li>
+                        <li>VIERNES de 8:30 a 11:30 horas</li>
+                        <li>Cel. +54 9 11 2752-8841</li>
+                        <li>Tel. 011 2051-5994</li>
+                        <li>bibalma@yahoo.com.ar</li>
+                        <li>Sarratea 4267 - San Justo (CP1754) - Buenos Aires, Argentina</li>
+                    </ul>
+                    <h2 class="info">Próximos eventos</h2>
+                    <div class="calendar-container">
+                        <div class="calendar">
+                          <div class="header">
+                            <span class="month"></span>
+                            <span class="year"></span>
+                          </div>
+                          <div class="days">
+                            <div class="day">Dom</div>
+                            <div class="day">Lun</div>
+                            <div class="day">Mar</div>
+                            <div class="day">Mier</div>
+                            <div class="day">Jue</div>
+                            <div class="day">Vier</div>
+                            <div class="day">Sab</div>
+                          </div>
+                          <div class="dates"></div>
+                        </div>
+                      </div>
+                </aside>
             </div>
         </section>
         
