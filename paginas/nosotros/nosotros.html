@@ -4,10 +4,179 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_n.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Nosotros</title>
 </head>
 <body>
-    <h1>Nosotros</h1>
-    <a href="../../index.html">Volver a página principal</a>
+
+    <header>
+        <div class="container_1">
+            <div class="encabezado">
+                <a href="../../index.html"> <img class="logo" src="logos/Bibalma10.png" alt="imagen-logo"></a>
+               
+            </div>
+            
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a class="centered" href="../nosotros/nosotros.html" target="_blank">Nosotros</a>    
+                    </li>
+                    <li>
+                        <a class="centered" href="../catalogo/catalogo.html" target="_blank">Catálogo</a>
+                    </li>
+                    <li>
+                        <a class="centered" href="../hacete_socio/hacete_socio.html" target="_blank">Hacete Socio</a>
+                    </li>
+                    <li>
+                        <a class="centered" href="../usuarios/usuario.html" target="_blank">Usuario</a>
+                    </li>
+                </ul>      
+            </nav>
+            <script>
+                window.addEventListener('scroll', function() {
+                  var navbar = document.querySelector('.navbar');
+                  navbar.classList.toggle('scroll', window.scrollY > 0);
+                });
+            </script>
+        </div>
+    </header>
+        
+    <main>
+    <section>
+        <div class="container_2a">
+            <div class="card">
+                <figure>
+                    <img src="imagenes/img1.jpg" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Inicios</h3>
+                    <p>La Bliblioteca Popular inició sus actividades el 13 de junio de 1993.</p>
+                    <a href="#Inicios">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="imagenes/img2.jpg" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Homenaje a "Almafuerte"</h3>
+                    <p>Se conmemoran 99 años del fallecimiento de "Almafuerte"</p>
+                    <a href="#Almafuerte">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="imagenes/img3.jpg" alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>Homenaje al Club de Lectores</h3>
+                    <p>El Club de Lectores rinde homenaje a la escritora Harper Lee</p>
+                    <a href="#Lectores">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="SlideImg">
+        <div class="slideshow">
+            <div class="slide active">
+              <img src="imagenes/slider/img1.png" alt="Imagen 1">
+              <div class="slide-caption">
+                <h2>Funcionamiento</h2>
+                <p>La Biblioteca cuenta con más de 24.000 ejemplares de libros variados, desde literatura infantil y juvenil, hasta textos universitarios de Derecho, Medicina y Psicología.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="imagenes/slider/img2.png" alt="Imagen 2">
+              <div class="slide-caption">
+                <h2>Servicios que ofrece la Biblioteca</h2>
+                <p>Exposiciones - Sala de Lectura - Publicaciones - Radio y TV - Rincón Infantil - Equipamiento para no videntes - Libros Incunables - Hemeroteca - S.U.M.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="imagenes/slider/img3.png" alt="Imagen 3">
+              <div class="slide-caption">
+                <h2>Cumplimos 30 años!!!</h2>
+                <p>El 13 de junio de 2023 cumplimos un año más</p>
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+         
+          
+          
+          <script>
+            const slides = document.querySelectorAll('.slide'); //Selecciona todos los elementos con la clase "slide" y los almacena en la variable slides
+            let currentSlide = 0; //Se declara una variable llamada currentSlide e inicializa con el valor 0. Esta variable se utiliza para realizar un seguimiento de la diapositiva actual que se está mostrando.
+
+            function showSlide(index) {             //Esta función se utiliza para mostrar una diapositiva específica en el slideshow.
+            slides[currentSlide].classList.remove('active');            //Primero se elimina la clase 'active' de la diapositiva actual
+            slides[index].classList.add('active');          //Luego, se agrega la clase 'active' a la diapositiva con el índice proporcionado 
+            currentSlide = index;
+            }           // Finalmente, se actualiza el valor de currentSlide con el nuevo índice.
+
+            function nextSlide() {
+            let newIndex = currentSlide + 1;
+            if (newIndex >= slides.length) {
+                newIndex = 0;
+            }
+            showSlide(newIndex);
+            }
+
+            function prevSlide() {
+            let newIndex = currentSlide - 1;
+            if (newIndex < 0) {
+                newIndex = slides.length - 1;
+            }
+            showSlide(newIndex);
+            }
+
+            setInterval(nextSlide, 8000);
+
+
+          </script>
+    </section>
+    <section>
+            <article id="Inicios" class="articulos">
+                <h3>Inicios</h3>
+                <p>
+                    La Biblioteca Popular Almafuerte, ubicada en la calle Sarratea 4.267, en la localidad de San Justo, fue fundada por el matrimonio de María Angélica y Andón el 13 de junio de 1993 y, luego de pasar por tres direcciones, actualmente se encuentra en Villa Constructora, desde 2016, luego de que la Sociedad de Fomento les cediera el espacio. Al igual que otras bibliotecas populares y sectores de la cultura del país, se encuentran en una situación crítica debido a la ley 27.432, que pondría fin a los fondos especiales destinados a financiar dichos sectores el 21 de diciembre de 2022.
+                </p>
+            </article>
+            <article id="Almafuerte" class="articulos">
+                <h3>Homenaje a Almafuerte</h3>
+                <p>
+                    La Biblioteca Popular Almafuerte de San Justo recuerda al gran hombre benefactor, generoso y activo hacia todos los que lo rodeaban, sin recibir y sin esperar ninguna recompensa.
+                    Ése fue Pedro Bonifacio Palacios, "Almafuerte", seudónimo que significa la fortaleza de su alma. 
+                    Siguiendo su ejemplo, esta Biblioteca "Almafuerte" continúa en la lucha con un corazón noble y generoso, para lograr ese lugar definitivo que dé a "Almafuerte", desde la lejanía, la tranquilidad de ver a su Biblioteca trabajar en paz.
+                </p>
+            </article>
+            <article id="Lectores" class="articulos">
+                <h3>Homenaje al Club de Lectores</h3>
+                <p>
+                    El Club de Lectores de la Biblioteca Popular Almafuerte de San Justo rinde homenaje a la escritora Harper Lee, autora de la novela "Matar a un Ruiseñor".
+                    Su mensaje en favor de la igualdad social y racial y en contra de la violencia, de la injusticia y de la mentira, es un mensaje para la sociedad actual y perdurará por siempre.
+                </p>
+            </article>
+    </section>
+
+    </main>
+
+    <footer>
+        <div class="container_3">
+            <div>
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5109633697766!2d-58.5553916!3d-34.692290099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc61de2692b13%3A0xa25b6e759984312f!2sSarratea%204267%2C%20B1754CFW%20San%20Justo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1682554478805!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <h3>Biblioteca Popular Almafuerte de San Justo
+                    Sarratea N°4267 - San Justo - Provincia de Buenos Aires
+                </h3>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

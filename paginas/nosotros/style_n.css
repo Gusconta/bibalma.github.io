@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {grid-area: header;}
+main {grid-area: section;}
+footer {grid-area: footer}
+
+body {
+    background-color: #fdf3dd;
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "section section section section"
+        "section section section section"
+        "section section section section"
+        "section section section section"
+        "section section section section"
+        "section section section section"
+        "footer footer footer footer";
+    grid-gap: 1px;
+    padding: 1px;
+}
+
+
+
+/*   header   */
+
+.encabezado {grid-area: encabezado;}
+.navbar {grid-area: navbar}
+
+.container_1 {
+    display: grid;
+    grid-template-areas:
+            'encabezado encabezado encabezado encabezado'
+            'navbar navbar navbar navbar';
+    grid-gap: 1px;
+}
+.encabezado {
+    height: 5em;  
+}
+
+.logo {
+    width: 15em;
+    height: 5em;
+}
+
+/*      main      */
+
+main {
+    background-color: #fdf3dd;
+}
+
+/*container 2a*/
+
+.container_2a {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 400px) {
+    .container_2a { 
+    display: flex;
+    flex-flow: row wrap;
+    } 
+}
+.card {
+    width: 100%;
+    margin: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    cursor: default; /*para que el cursor sea la flechita*/
+    transition: all 400ms ease;
+}
+.card:hover {
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+.card img {
+    width: 100%;
+    height: 210px;
+}
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p {
+    line-height: 1.5;
+    color: #6E4F3B;
+}
+.card .contenido h3 {
+    font-weight: 400; /*le quita un poco de negrita*/
+    margin-bottom: 15px; /*se aleja del borde de abajo*/
+}
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color:#6E4F3B;
+    border: 1px solid #6E4F3B;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover {
+    background-color: #6E4F3B;
+    color: #fff;
+} 
+
+/*Secciones y Articulos*/
+
+section {
+
+}
+.articulos {
+    background-color: #fff;
+    text-align: center;
+    height: 10em;
+    margin:40px;
+    height: 20em;
+}
+
+section article h3 {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #6E4F3B;
+    border-radius: 3px;
+    transition: all 400ms ease;
+}
+section article h3:hover {
+    background-color: #6E4F3B;
+    color: #fff;
+}    
+section article p {
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fdf3dd;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+/*slider*/
+
+.SlideImg {
+    background-color: rgb(255,255,255);
+    padding: 30px;
+}
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .slide-caption h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .slide-caption p {
+    margin: 10px 0 0;
+  }
+  .slide.active {
+    opacity: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .prev, .next {
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev:focus, .next:focus {
+    outline: none;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #555;
+  }
+  
+
+
+/*      footer      */
+
+footer {grid-area: footer}
+
+.container_3 {
+    display: grid;
+    grid-template-areas:
+            'footer footer footer footer'
+            'footer footer footer footer';                  
+}
+
+footer {
+    background-color: #cb962e;
+}
+
+.mapa {
+    width: 18em;
+    height: 8em;
+    padding: 10px;    
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*        barra de navegacion        */
+
+nav:hover {
+    opacity: 1;   
+}
+
+.navbar {
+        background-color: #ef601e;
+        transition: 1.0s ease;
+        position: sticky;
+        top: 0;
+    /*Se aplica una transición de 0.3 segundos*/
+}
+
+.navbar.scroll {
+    opacity: 0.3;
+    /*Fondo transparente de la barra nav cuando se scrollea*/
+}
+
+.navbar.scroll:hover {
+    background-color: #ef601e;
+    opacity: 1;
+}
+
+nav ul {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap; /*propiedad shorthand*/
+    
+    justify-content: space-evenly;
+    align-items: center; /*Puede servir para mediaquieries*/
+    list-style-type: none;
+    height: 2.5em;
+    padding: 4px;
+    transition: 0.3s all;
+          
+}
+nav ul:hover {
+    
+    height: 60px;
+    transition: 0.3s all;
+}
+
+nav ul li {
+    height: 100%;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 8em;
+    height: 100%;
+    color: #d6e8f7;
+    transition: 0.3s all;
+}
+
+nav ul li a:hover {
+    background-color: #CAAACD;
+    color: #6E4F3B;
+    border-radius: 5px;
+    transition: 0.3s all;
+}
